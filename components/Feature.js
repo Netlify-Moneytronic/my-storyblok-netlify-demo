@@ -1,15 +1,15 @@
 import { storyblokEditable } from "@storyblok/react";
 
 const Feature = ({ blok }) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" {...storyblokEditable(blok)}>
-    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  <div className="bg-white p-10 group hover:bg-navy-900 transition-colors duration-300" {...storyblokEditable(blok)}>
+    <div className="w-12 h-12 border border-gold-400 flex items-center justify-center mb-8 group-hover:bg-gold-500 transition-colors duration-300">
+      <svg className="w-6 h-6 text-gold-500 group-hover:text-navy-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     </div>
-    <h3 className="text-2xl font-bold text-gray-900 mb-4">{blok.name}</h3>
+    <h3 className="text-xl font-semibold text-navy-800 mb-3 group-hover:text-white transition-colors duration-300">{blok.name}</h3>
     {blok.description && (
-      <p className="text-gray-600 text-lg leading-relaxed">{blok.description}</p>
+      <p className="text-charcoal-500 leading-relaxed group-hover:text-charcoal-300 transition-colors duration-300">{blok.description}</p>
     )}
   </div>
 );

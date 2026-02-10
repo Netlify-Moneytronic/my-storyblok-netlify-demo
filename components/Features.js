@@ -2,47 +2,48 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
 const Features = ({ blok }) => {
   return (
-    <section className="py-24 bg-gray-50" {...storyblokEditable(blok)}>
+    <section className="py-24 bg-white" id="services" {...storyblokEditable(blok)}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            {blok.headline || "Why Choose Us"}
+        <div className="max-w-3xl mb-20">
+          <div className="w-12 h-0.5 bg-gold-500 mb-6"></div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-navy-800 mb-6">
+            {blok.headline || "Comprehensive Financial Services"}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {blok.subheadline || "Discover the features that make us the preferred choice for thousands of businesses worldwide."}
+          <p className="text-lg text-charcoal-500 leading-relaxed">
+            {blok.subheadline || "From wealth management to estate planning, our integrated approach ensures every aspect of your financial life is expertly managed."}
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-charcoal-200">
           {blok.features?.map((nestedBlok) => (
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           )) || (
             <>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              <div className="bg-white p-10 group hover:bg-navy-900 transition-colors duration-300">
+                <div className="w-12 h-12 border border-gold-400 flex items-center justify-center mb-8 group-hover:bg-gold-500 transition-colors duration-300">
+                  <svg className="w-6 h-6 text-gold-500 group-hover:text-navy-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Lightning Fast</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Experience blazing-fast performance that keeps your users engaged and your business moving forward.</p>
+                <h3 className="text-xl font-semibold text-navy-800 mb-3 group-hover:text-white transition-colors duration-300">Wealth Management</h3>
+                <p className="text-charcoal-500 leading-relaxed group-hover:text-charcoal-300 transition-colors duration-300">Personalized portfolio strategies designed to preserve and grow your wealth across market cycles.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="bg-white p-10 group hover:bg-navy-900 transition-colors duration-300">
+                <div className="w-12 h-12 border border-gold-400 flex items-center justify-center mb-8 group-hover:bg-gold-500 transition-colors duration-300">
+                  <svg className="w-6 h-6 text-gold-500 group-hover:text-navy-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Secure & Reliable</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Built with enterprise-grade security and 99.9% uptime guarantee to keep your data safe and accessible.</p>
+                <h3 className="text-xl font-semibold text-navy-800 mb-3 group-hover:text-white transition-colors duration-300">Risk Advisory</h3>
+                <p className="text-charcoal-500 leading-relaxed group-hover:text-charcoal-300 transition-colors duration-300">Comprehensive risk assessment and mitigation strategies to safeguard your assets and future.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              <div className="bg-white p-10 group hover:bg-navy-900 transition-colors duration-300">
+                <div className="w-12 h-12 border border-gold-400 flex items-center justify-center mb-8 group-hover:bg-gold-500 transition-colors duration-300">
+                  <svg className="w-6 h-6 text-gold-500 group-hover:text-navy-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Easy to Use</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Intuitive interface designed for everyone, from beginners to experts. Get started in minutes, not hours.</p>
+                <h3 className="text-xl font-semibold text-navy-800 mb-3 group-hover:text-white transition-colors duration-300">Estate Planning</h3>
+                <p className="text-charcoal-500 leading-relaxed group-hover:text-charcoal-300 transition-colors duration-300">Strategic estate structures that ensure your legacy endures and your beneficiaries are protected.</p>
               </div>
             </>
           )}

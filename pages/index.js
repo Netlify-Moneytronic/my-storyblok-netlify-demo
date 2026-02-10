@@ -13,8 +13,8 @@ export default function Home({ story }) {
   return (
     <div>
       <Head>
-        <title>Transform Your Business Today | YourBrand</title>
-        <meta name="description" content="Discover the power of innovation with our cutting-edge solutions designed to accelerate your growth and success." />
+        <title>Mariner Finance | Wealth Management & Financial Advisory</title>
+        <meta name="description" content="Trusted wealth management and financial advisory services for high-net-worth individuals, families, and institutions. Building legacies since 2002." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StoryblokComponent blok={story.content} />

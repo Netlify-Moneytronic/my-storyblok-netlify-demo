@@ -2,14 +2,15 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
 const Testimonials = ({ blok }) => {
   return (
-    <section className="py-24 bg-white" {...storyblokEditable(blok)}>
+    <section className="py-24 bg-charcoal-50" id="testimonials" {...storyblokEditable(blok)}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            {blok.headline || "What Our Customers Say"}
+        <div className="max-w-3xl mb-20">
+          <div className="w-12 h-0.5 bg-gold-500 mb-6"></div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-navy-800 mb-6">
+            {blok.headline || "Client Perspectives"}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {blok.subheadline || "Join thousands of satisfied customers who have transformed their business with our solutions."}
+          <p className="text-lg text-charcoal-500 leading-relaxed">
+            {blok.subheadline || "The trust of our clients is the foundation of everything we do. Hear from those whose financial futures we've helped shape."}
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -17,61 +18,46 @@ const Testimonials = ({ blok }) => {
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           )) || (
             <>
-              <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+              <div className="bg-white border border-charcoal-200 p-10">
+                <div className="mb-8">
+                  <svg className="w-8 h-8 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
                 </div>
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed">"This solution completely transformed how we operate. The results exceeded our expectations and the support team is incredible."</p>
-                <div className="flex items-center">
-                  <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                    JS
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-lg">John Smith</p>
-                    <p className="text-gray-600">CEO, TechCorp</p>
-                  </div>
+                <p className="text-charcoal-600 mb-8 leading-relaxed">
+                  "Mariner Finance transformed our approach to wealth preservation. Their strategic insight and unwavering dedication have been instrumental in securing our family's financial future."
+                </p>
+                <div className="border-t border-charcoal-200 pt-6">
+                  <p className="font-semibold text-navy-800">James Harrington</p>
+                  <p className="text-charcoal-400 text-sm mt-1">Chairman, Harrington Holdings</p>
                 </div>
               </div>
-              <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+              <div className="bg-white border border-charcoal-200 p-10">
+                <div className="mb-8">
+                  <svg className="w-8 h-8 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
                 </div>
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed">"Amazing product with outstanding customer service. We saw immediate improvements in our workflow and productivity."</p>
-                <div className="flex items-center">
-                  <div className="w-14 h-14 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                    MJ
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-lg">Maria Johnson</p>
-                    <p className="text-gray-600">Director, InnovateLab</p>
-                  </div>
+                <p className="text-charcoal-600 mb-8 leading-relaxed">
+                  "In over fifteen years of partnership, Mariner Finance has consistently demonstrated exceptional judgment. Their risk-adjusted returns speak for themselves."
+                </p>
+                <div className="border-t border-charcoal-200 pt-6">
+                  <p className="font-semibold text-navy-800">Victoria Chen</p>
+                  <p className="text-charcoal-400 text-sm mt-1">CEO, Pacific Ventures Group</p>
                 </div>
               </div>
-              <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+              <div className="bg-white border border-charcoal-200 p-10">
+                <div className="mb-8">
+                  <svg className="w-8 h-8 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
                 </div>
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed">"The best investment we've made for our business. Simple to use, powerful features, and excellent ROI."</p>
-                <div className="flex items-center">
-                  <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                    DW
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-lg">David Wilson</p>
-                    <p className="text-gray-600">Founder, StartupXYZ</p>
-                  </div>
+                <p className="text-charcoal-600 mb-8 leading-relaxed">
+                  "The estate planning framework they developed for us was nothing short of masterful. Every detail was considered, every contingency addressed."
+                </p>
+                <div className="border-t border-charcoal-200 pt-6">
+                  <p className="font-semibold text-navy-800">Robert Ashford III</p>
+                  <p className="text-charcoal-400 text-sm mt-1">Founder, Ashford Family Office</p>
                 </div>
               </div>
             </>
