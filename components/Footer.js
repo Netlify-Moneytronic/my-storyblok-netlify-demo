@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-950 text-white py-16 border-t border-gray-800">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
@@ -26,7 +26,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-xl font-bold mb-6">Product</h4>
             <ul className="space-y-4">
@@ -36,7 +36,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-lg">Integrations</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-xl font-bold mb-6">Support</h4>
             <ul className="space-y-4">
@@ -47,7 +47,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-lg">
             © 2025 Anil. All rights reserved.
