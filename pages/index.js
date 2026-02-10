@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-
 import {
   useStoryblokState,
   getStoryblokApi,
@@ -13,8 +12,8 @@ export default function Home({ story }) {
   return (
     <div>
       <Head>
-        <title>Transform Your Business Today | YourBrand</title>
-        <meta name="description" content="Discover the power of innovation with our cutting-edge solutions designed to accelerate your growth and success." />
+        <title>Elevate | The Modern Marketing Platform</title>
+        <meta name="description" content="Elevate is the all-in-one marketing platform that helps you attract, engage, and convert your audience with data-driven strategies." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StoryblokComponent blok={story.content} />
@@ -26,7 +25,7 @@ export async function getStaticProps() {
   let slug = "home";
 
   let sbParams = {
-    version: "draft", // or 'published'
+    version: "draft",
   };
 
   const storyblokApi = getStoryblokApi();

@@ -2,13 +2,13 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
 const Grid = ({ blok }) => {
   return (
-    <section className="py-24 bg-gray-900" {...storyblokEditable(blok)}>
-      <div className="container mx-auto px-6">
+    <section className="py-24 bg-brand-50/40" {...storyblokEditable(blok)}>
+      <div className="max-w-7xl mx-auto px-6">
         {blok.headline && (
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-6">{blok.headline}</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight">{blok.headline}</h2>
             {blok.subheadline && (
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">{blok.subheadline}</p>
+              <p className="text-lg text-gray-500 max-w-2xl mx-auto">{blok.subheadline}</p>
             )}
           </div>
         )}
