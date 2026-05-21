@@ -1,5 +1,5 @@
 
-# Storyblok quick starter project
+# Storyblok quick starter project for Netlify
 
 Welcome to this sample project for Next.js!
 This project serves as a quick starter for integrating Storyblok, a headless CMS, into your web development projects.
